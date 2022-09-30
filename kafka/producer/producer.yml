@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: producer
+  labels:
+    app: myproducer
+spec:
+  containers:
+    - name: producer
+      image: muteebakram/producer:2
+      command: ["python", "-u", "./producer.py"]
